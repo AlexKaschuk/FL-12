@@ -32,12 +32,8 @@ section::before {
 .tm-banner-text {
     text-shadow: 4px 5px 4px #333;
     animation-name: slidetoleft;
-    animation-timing-function: ease-in;
     animation-timing-function: ease-out;
     animation-duration: 4s;
-    animation-delay: 2s;
-    animation-iteration-count: 1;
-    visibility: visible;
 }
 
 @keyframes slidetoleft {
@@ -173,12 +169,15 @@ input[type="email"]:focus {
     a.text::after {
         display: none !important;
     }
+    body,
+    .tm-main-content {
+        padding: 10px;
+    }
     section::before {
         content: "";
         display: none;
     }
     .heading ol {
-        list-style-position: inside;
         margin-bottom: 20px;
     }
     .tm-banner {
@@ -190,18 +189,21 @@ input[type="email"]:focus {
     .padding-medium {
         margin: 0 auto !important;
         padding: 0 !important;
-        max-height: 175px !important;
         min-width: 800px !important;
-        text-align: center !important;
+        text-align: center;
     }
     .tm-section-title {
         text-transform: uppercase;
         font-weight: normal;
     }
+    #tmCarousel {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     .blocks h2,
     .blocks p {
         min-width: 800px !important;
-        margin: 0 !important;
+        margin: 10px!important;
     }
     .blocks h2 {
         margin-top: 40px !important;
@@ -209,14 +211,11 @@ input[type="email"]:focus {
     }
     li {
         list-style: none;
-        padding-left: 170px;
-        line-height: 16px;
+        padding-left: 200px;
+        text-align: left;
     }
-    li:nth-child(even) {
-        margin-right: 60%;
-    }
-    footer {
-        position: relative;
-        margin-top: 40px;
+    li:nth-child(odd) {
+        margin-right: 32%;
+        text-align: right;
     }
 }
