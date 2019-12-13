@@ -9,15 +9,7 @@
     font-stretch: ultra-expanded;
 }
 
-@mixin logoStyle {
-    vertical-align: middle;
-    margin-top: 21px;
-    margin-right: 15px;
-    width: 45px;
-    height: 45px;
-}
-
-.basicButton {
+@mixin myButton {
     color: white;
     background-color: $buttonColor;
     padding: 15px 45px;
@@ -26,6 +18,18 @@
     font-weight: bold;
     border: 0;
     border-radius: 3px;
+}
+
+@mixin links {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.logoStyle {
+    vertical-align: middle;
+    margin-top: 21px;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
 }
 
 body {
@@ -41,8 +45,8 @@ body {
     background-size: cover;
     position: relative;
     a {
+        @include links;
         margin-left: 175px;
-        font-family: "Source Sans Pro", sans-serif;
         color: white;
     }
 }
@@ -52,7 +56,7 @@ body {
     margin-left: 184px;
     text-align: center;
     img {
-        @include logoStyle();
+        @extend .logoStyle;
     }
     p {
         color: $textColorHeader;
@@ -93,7 +97,7 @@ body {
 }
 
 .header_button {
-    @extend .basicButton;
+    @include myButton;
     margin-left: 184px;
     margin-bottom: 170px;
 }
@@ -174,6 +178,7 @@ body {
         word-spacing: 2px;
     }
     a.section_link {
+        @include links;
         color: rgb(175, 175, 180);
         margin: auto;
         margin-bottom: 40px;
@@ -211,7 +216,7 @@ body {
         }
     }
     button {
-        @extend .basicButton;
+        @include myButton;
         margin: 50px auto 50px;
         display: block;
     }
@@ -259,6 +264,7 @@ body {
         p {
             color: rgb(175, 175, 180);
             margin-right: 400px;
+            width: 150px;
         }
     }
 }
