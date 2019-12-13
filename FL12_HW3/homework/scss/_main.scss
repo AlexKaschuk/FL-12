@@ -17,12 +17,12 @@
     height: 45px;
 }
 
-@mixin myButton {
+.basicButton {
     color: white;
     background-color: $buttonColor;
     padding: 15px 45px;
     font-family: sans-serif;
-    font-size: 17px;
+    font-size: map-get($font-sizes, "normal");
     font-weight: bold;
     border: 0;
     border-radius: 3px;
@@ -62,7 +62,7 @@ body {
         line-height: 1.2;
         span {
             font-weight: normal;
-            font-size: 12px;
+            font-size: map-get($font-sizes, "small");
             display: block;
         }
         span::before {
@@ -78,7 +78,7 @@ body {
     text-align: left;
     max-width: 700px;
     margin: 48px 0 34px 184px;
-    font-size: 70px;
+    font-size: map-get($font-sizes, "large");
     font-weight: bold;
     line-height: 0.97;
 }
@@ -86,14 +86,14 @@ body {
 .header_text {
     @include TextStyle;
     white-space: pre;
-    font-size: 16px;
-    margin-left: 132px;
+    font-size: 12px;
+    margin-left: 152px;
     margin-bottom: 28px;
     line-height: 1.7;
 }
 
 .header_button {
-    @include myButton;
+    @extend .basicButton;
     margin-left: 184px;
     margin-bottom: 170px;
 }
@@ -169,7 +169,7 @@ body {
         line-height: 1.6;
         color: #c0c0c4;
         text-align: justify;
-        font-size: 16px;
+        font-size: map-get($font-sizes, "small");
         font-stretch: ultra-expanded;
         word-spacing: 2px;
     }
@@ -177,7 +177,7 @@ body {
         color: rgb(175, 175, 180);
         margin: auto;
         margin-bottom: 40px;
-        font-size: 16px;
+        font-size: map-get($font-sizes, "small");
         font-weight: bold;
     }
 }
@@ -207,11 +207,11 @@ body {
         .section_banner_text {
             color: rgb(175, 175, 180);
             margin: 15px 35px auto;
-            font-size: 17px;
+            font-size: map-get($font-sizes, "normal");
         }
     }
     button {
-        @include myButton;
+        @extend .basicButton;
         margin: 50px auto 50px;
         display: block;
     }

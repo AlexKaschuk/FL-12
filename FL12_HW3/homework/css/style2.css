@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.basicButton, .header_button, .section_banner button {
+  color: white;
+  background-color: #E3AC00;
+  padding: 15px 45px;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 3px; }
+
 body {
   background: #21232E; }
 
@@ -33,7 +43,7 @@ body {
     line-height: 1.2; }
     .landing-logo p span {
       font-weight: normal;
-      font-size: 12px;
+      font-size: 16px;
       display: block; }
     .landing-logo p span::before {
       content: “\A”;
@@ -53,20 +63,12 @@ body {
   font-family: "Fresca", sans-serif;
   color: white;
   white-space: pre;
-  font-size: 16px;
-  margin-left: 132px;
+  font-size: 12px;
+  margin-left: 152px;
   margin-bottom: 28px;
   line-height: 1.7; }
 
 .header_button {
-  color: white;
-  background-color: #E3AC00;
-  padding: 15px 45px;
-  font-family: sans-serif;
-  font-size: 17px;
-  font-weight: bold;
-  border: 0;
-  border-radius: 3px;
   margin-left: 184px;
   margin-bottom: 170px; }
 
@@ -172,14 +174,6 @@ body {
       margin: 15px 35px auto;
       font-size: 17px; }
   .section_banner button {
-    color: white;
-    background-color: #E3AC00;
-    padding: 15px 45px;
-    font-family: sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 3px;
     margin: 50px auto 50px;
     display: block; }
 
