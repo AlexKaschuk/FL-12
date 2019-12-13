@@ -78,9 +78,9 @@ html {
     font-size: 0.6vw;
     font-weight: bold;
     color: #777;
-    border: 1px solid #777;
+    border: 0.1vw solid #777;
     background-color: #ffffff;
-    border-radius: 40px;
+    border-radius: 3vw;
     padding: 2% 3%;
     cursor: pointer;
     text-transform: uppercase;
@@ -98,7 +98,7 @@ html {
     padding-top: 3%;
     width: 60%;
     margin: auto;
-    border-bottom: 1px solid #777;
+    border-bottom: 0.1vw solid #777;
 }
 
 .section_card:first-of-type {
@@ -118,15 +118,15 @@ html {
 
 .author {
     width: 4%;
-    border-radius: 25px;
+    border-radius: 2vw;
     position: relative;
-    bottom: -12px;
+    bottom: -1vw;
 }
 
 .author_name {
     display: inline-block;
     text-transform: capitalize;
-    margin-bottom: 12px;
+    margin-bottom: 1vw;
     font-size: 1vw;
     color: #777;
 }
@@ -148,9 +148,9 @@ span::after {
     font-weight: bold;
     font-size: 1vw;
     color: #777;
-    border: 1px solid #777;
+    border: 0.1vw solid #777;
     background-color: #ffffff;
-    border-radius: 40px;
+    border-radius: 3vw;
     padding: 1.4%;
     margin-bottom: 10%;
     cursor: pointer;
