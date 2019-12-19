@@ -1,0 +1,435 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: roboto;
+        background-color: #0b192f;
+        max-width: 1400px;
+        margin: auto;
+    }
+    
+    header {
+        background-color: #024161;
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .sandwitch {
+        display: none;
+    }
+    
+    .logo {
+        margin-left: 3%;
+        width: 50%;
+        position: relative;
+    }
+    
+    .logo h2 {
+        width: 50%;
+        font-size: 2em;
+        color: #fff;
+        font-weight: lighter;
+        margin: 2%;
+    }
+    
+    .logo span {
+        color: #9d27b0;
+    }
+    
+    .topnav {
+        width: 30vw;
+        margin-right: 1%;
+        text-align: right;
+    }
+    
+    .topnav a {
+        color: #fff;
+        font-size: 0.8vw;
+        letter-spacing: 0.2vw;
+        text-align: center;
+        padding: 10% 4%;
+        margin: auto;
+        text-decoration: none;
+    }
+    
+    .topnav a:hover {
+        background-color: #1f52a4;
+        margin: 0;
+    }
+    
+    .header_img {
+        background-image: url("../img/post0.jpg");
+        width: 100%;
+        height: 60vh;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .Post-0 {
+        text-align: left;
+        position: absolute;
+        bottom: 3vh;
+        left: 2vw;
+        color: white;
+    }
+    
+    .Post-0 h2 {
+        font-size: 3em;
+        font-weight: lighter;
+    }
+    
+    .Post-0 p {
+        line-height: 2;
+        width: 65%;
+        font-size: 1em;
+        font-weight: lighter;
+        opacity: 0.7;
+    }
+    
+    .grid_block {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    
+    .section_card {
+        width: 98%;
+        display: flex;
+        color: #fff;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    .section_card_post {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main_posts img {
+        height: 100%;
+        width: 26.7vw;
+        object-fit: cover;
+    }
+    
+    .main_posts img:hover {
+        opacity: 0.5;
+    }
+    
+    .section_card:nth-of-type(even) div:last-of-type {
+        order: -1;
+        text-align: right;
+        margin-left: 2%;
+    }
+    
+    .section_card_heading,
+    .last-post h2 {
+        font-size: 3.1em;
+        font-weight: lighter;
+        padding: 8%;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    
+    .section_card_post:hover .section_card_heading,
+    .last-post:hover h2 {
+        opacity: 0.6;
+    }
+    
+    .section_card_text {
+        line-height: 2;
+        font-size: 1.1vw;
+        font-weight: lighter;
+        padding: 9%;
+        padding-top: 20px;
+        margin: 0;
+        opacity: 0.6;
+    }
+    
+    .last-post {
+        width: 98%;
+        color: #fff;
+        position: relative;
+    }
+    
+    .date {
+        position: absolute;
+        font-size: 2.9vw;
+        font-weight: lighter;
+        opacity: 0.2;
+        top: -2vw;
+        right: 1vw;
+    }
+    
+    .date span {
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+    
+    .date_odd {
+        position: absolute;
+        font-size: 2.9vw;
+        font-weight: lighter;
+        opacity: 0.2;
+        top: -2vw;
+        left: 1vw;
+    }
+    
+    .date_odd span {
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+    
+    .date_last {
+        position: absolute;
+        font-size: 2.9vw;
+        font-weight: lighter;
+        opacity: 0.2;
+        top: -2vw;
+        right: 1vw;
+    }
+    
+    .date_last span {
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+    
+    .news {
+        width: auto;
+        background-color: white;
+        margin-bottom: 5%;
+    }
+    
+    .news h2 {
+        font-size: 2vw;
+        font-weight: 300;
+        padding: 10%;
+        padding-bottom: 0;
+        margin: 0;
+        opacity: 0.7;
+    }
+    
+    .news p {
+        font-size: 1vw;
+        line-height: 2;
+        font-weight: lighter;
+        padding: 10%;
+        padding-top: 2%;
+        margin: 0;
+        opacity: 0.7;
+    }
+    
+    .news img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .post-1 {
+        background: #9d27b0;
+    }
+    
+    .post-2 {
+        background: #9bb800;
+    }
+    
+    .post-3 {
+        background: #ed5120;
+    }
+    
+    .post-4 {
+        background: #9d27b0;
+    }
+    
+    .post-5 {
+        background: #2d95bb;
+    }
+    
+    .footer {
+        background-color: #024161;
+        text-align: left;
+        margin-top: 3%;
+        color: #fff;
+        opacity: 0.3;
+        overflow: auto;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .topnav {
+            display: none;
+        }
+        header {
+            flex-direction: column;
+        }
+        .logo {
+            margin: auto;
+        }
+        .logo h2 {
+            padding: 4vh;
+            margin: auto;
+            box-sizing: initial;
+        }
+        .sandwitch {
+            display: block;
+            color: #fff;
+            font-size: 3em;
+        }
+        .header_img {
+            height: 30vh;
+            margin-top: 3%;
+        }
+        .Post-0 h2,
+        .section_card_heading,
+        .last-post h2 {
+            font-size: 1.3em;
+            font-weight: lighter;
+            text-align: left;
+        }
+        .Post-0 p,
+        .section_card_text {
+            line-height: 2;
+            width: 100%;
+            font-size: 1em;
+            font-weight: lighter;
+            text-align: left;
+        }
+        .grid_block {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+        .section_card {
+            display: block;
+        }
+        .main_posts img {
+            height: 20vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        .date,
+        .date_odd {
+            position: absolute;
+            font-size: 2.9vw;
+            font-weight: lighter;
+            opacity: 0.2;
+            top: -2vw;
+            right: 1vw;
+        }
+        .news h2 {
+            font-size: 1em;
+            opacity: 1;
+        }
+        .news p {
+            font-size: 0.7em;
+            opacity: 1;
+        }
+        .footer {
+            font-size: 0.7em;
+            text-align: center;
+            padding: 4%;
+        }
+        .footer p {
+            margin: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .topnav {
+            display: none;
+        }
+        header {
+            flex-direction: column;
+        }
+        .logo {
+            margin: auto;
+        }
+        .logo h2 {
+            padding: 4vh;
+            margin: auto;
+            box-sizing: initial;
+        }
+        .sandwitch {
+            display: block;
+            color: #fff;
+            font-size: 3em;
+        }
+        .header_img {
+            height: 30vh;
+            margin-top: 3%;
+        }
+        .grid_block {
+            display: block;
+        }
+        .Post-0 h2,
+        .section_card_heading,
+        .last-post h2 {
+            font-size: 1.3em;
+            font-weight: lighter;
+            text-align: left;
+        }
+        .Post-0 p,
+        .section_card_text {
+            line-height: 2;
+            width: 100%;
+            font-size: 1em;
+            font-weight: lighter;
+            text-align: left;
+        }
+        .section_card {
+            display: block;
+            width: 100%;
+        }
+        .last-post {
+            width: 100%;
+        }
+        .main_posts img {
+            height: 20vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        .date,
+        .date_odd {
+            position: absolute;
+            font-size: 2.9vw;
+            font-weight: lighter;
+            opacity: 0.2;
+            top: -2vw;
+            right: 1vw;
+        }
+        .news h2 {
+            font-size: 1em;
+            opacity: 1;
+        }
+        .news p {
+            font-size: 0.7em;
+            opacity: 1;
+        }
+        .footer {
+            font-size: 0.7em;
+            text-align: center;
+            padding: 4%;
+        }
+        .footer p {
+            margin: 0;
+        }
+    }
+    
+    @media only screen and (min-width: 769px) {
+        .footer_copyright {
+            float: left;
+        }
+        .footer_design {
+            float: right;
+        }
+        .footer_text {
+            margin: 40px 35px;
+        }
+    }
