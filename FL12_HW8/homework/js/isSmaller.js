@@ -3,3 +3,4 @@ function isSmaller(a, b) {
 }
 
 isSmaller(12, 4);
+isBigger(4, 12);
