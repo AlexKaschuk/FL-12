@@ -4,3 +4,4 @@ function pipe(value) {
     }
     return value;
 }
+pipe(1);

@@ -7,3 +7,5 @@ function makeNumber(text) {
     }
     return myNumber;
 }
+
+makeNumber('l1k2h1p24');

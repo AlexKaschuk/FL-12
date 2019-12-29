@@ -6,9 +6,14 @@ function isLeapYear(date) {
     const SIMPLE_LEAP = 4;
     if (isNaN(year)) {
         console.log('invalid Date');
-    } else if (year % HANDRED_LEAP_YERS === 0 || year % SIMPLE_LEAP === 0 && year % HANDRED_NOT_LEAP_YERS !== 0) {
-        console.log(year + " is a leap year");
+    } else if (
+        year % HANDRED_LEAP_YERS === 0 ||
+        (year % SIMPLE_LEAP === 0 && year % HANDRED_NOT_LEAP_YERS !== 0)
+    ) {
+        console.log(year + ' is a leap year');
     } else {
-        console.log(year + " is not a leap year");
+        console.log(year + ' is not a leap year');
     }
 }
+
+isLeapYear(12312444);

@@ -16,3 +16,5 @@ function countNumber(text) {
     }
     console.log(myCounter);
 }
+
+countNumber('l1k2h1p24');

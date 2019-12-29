@@ -7,3 +7,5 @@ function getMin() {
     }
     return minNum;
 }
+
+getMin(12, 13, 4, 5, 6, 7);
