@@ -6,8 +6,8 @@ class Fighter {
         this._strength = strength;
         this._agility = agility;
         this._startHp = hp;
-        this.wins = 0;
-        this.loss = 0;
+        this._wins = 0;
+        this._loss = 0;
     }
     getName() {
         return this._name;
@@ -55,10 +55,10 @@ class Fighter {
         }
     }
     addWin() {
-        this.wins++;
+        this._wins++;
     }
     addLoss() {
-        this.loss++;
+        this._loss++;
     }
 }
 
