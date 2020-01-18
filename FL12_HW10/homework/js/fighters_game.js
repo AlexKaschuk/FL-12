@@ -38,7 +38,9 @@ class Fighter {
         }
     }
     logCombatHistory() {
-        console.log(`Name: ${this._name}, Wins: ${this.wins}, Loses: ${this.loss}`);
+        console.log(
+            `Name: ${this._name}, Wins: ${this._wins}, Loses: ${this._loss}`
+        );
     }
     heal(heals) {
         if (this._hp > this._startHp - heals) {
@@ -63,22 +65,26 @@ class Fighter {
 }
 
 function battle(myFighter, myFighter1) {
-    if (myFighter.getHealth() > 0 && myFighter1.getHealth() > 0) {
-        myFighter.attack(myFighter1);
-        if (myFighter1.getHealth() > 0) {
-            myFighter1.attack(myFighter);
-            battle(myFighter, myFighter1);
-        } else {
-            myFighter1._hp = 0;
-            console.log(`${myFighter.getName()} has won`);
-            myFighter1.addLoss();
-            myFighter.addWin();
+    if (myFighter.getHealth() === 0) {
+        console.log(`${myFighter.getName()} is dead and can't fight`);
+    } else if (myFighter1.getHealth() === 0) {
+        console.log(`${myFighter1.getName()} is dead and can't fight`);
+    } else {
+        if (myFighter.getHealth() > 0 && myFighter1.getHealth() > 0) {
+            myFighter.attack(myFighter1);
+            if (myFighter1.getHealth() > 0) {
+                myFighter1.attack(myFighter);
+                battle(myFighter, myFighter1);
+            } else {
+                console.log(`${myFighter.getName()} has won`);
+                myFighter1.addLoss();
+                myFighter.addWin();
+            }
+        } else if (myFighter.getHealth() <= 0) {
+            console.log(`${myFighter1.getName()} has won`);
+            myFighter.addLoss();
+            myFighter1.addWin();
         }
-    } else if (myFighter.getHealth() <= 0) {
-        myFighter._hp = 0;
-        console.log(`${myFighter1.getName()} has won`);
-        myFighter.addLoss();
-        myFighter1.addWin();
     }
 }
 
