@@ -1,0 +1,41 @@
+ul,
+li {
+    list-style-type: none;
+    padding-inline-start: 3px;
+    cursor: pointer;
+}
+
+.folder-item:hover,
+.file-item:hover {
+    background-color: lightgrey;
+}
+
+.folder-item i {
+    color: #EDBC0B;
+    vertical-align: bottom;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.file-item i {
+    color: #BBBBBB;
+    vertical-align: bottom;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.folder-wrapper {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.closed::after {
+    content: "folder";
+}
+
+.opened::after {
+    content: "folder_open";
+}
