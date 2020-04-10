@@ -33,30 +33,43 @@ const structure = [{
 
 const rootNode = document.getElementById('root');
 
-function displayStructure(data) {
-    let folders = "<ul class='folder-container'>";
-    for (let key in data) {
-        if (typeof data[key] === 'object' && data[key] !== null) {
-            folders += displayStructure(data[key]);
-            folders += '</ul></li>';
-        } else if (data[key] === true) {
-            folders += "<li class='folder-item'>" + '<i class="material-icons closed"></i>' +
-                data['title'] + "</li><li class='folder-wrapper'>";
-        } else if (key === 'title' && data['folder'] !== true) {
-            folders += "<li class='file-item'>" + '<i class="material-icons">insert_drive_file</i>' +
-                data['title'] + '</li>';
-        } else if (data[key] === false || data[key] === null) {
-            folders += '<i>Folder is empty</i>'
+
+function display(arguments) {
+    let folders = "";
+    let closedIcon = "<i class='material-icons closed'></i>";
+    let fileIcon = "<i class='material-icons'>insert_drive_file</i>";
+    let wrapper = "<ul class='folder-wrapper'>";
+    arguments.forEach(element => {
+        if (element['folder']) {
+            folders += "<div class='folder-container'>" + "<li class='folder-item'>" + closedIcon +
+                element['title'] + "</li>" + wrapper;
         }
-    }
+        if (element['title'] && !element['folder']) {
+            folders += "<li class='file-item'>" + fileIcon +
+                element['title'] + '</li>';
+        }
+        if (element['children']) {
+            folders += display(element['children']);
+            folders += '</div></li>';
+        }
+        if (element['children'] === false) {
+            folders += "<div class='folder-container'>" + '<i>Folder is empty</i>' + "</div>" + "</div>";
+        }
+        if (element['children'] === null) {
+            folders += "<div class='folder-container'>" + '<i>Folder is empty</i>' + "</div>" + "</div>";
+        }
+
+    });
     return folders;
 }
-rootNode.innerHTML = displayStructure(structure);
-let conteiners = document.getElementsByClassName('folder-item');
-let i;
 
-for (i = 0; i < conteiners.length; i++) {
-    conteiners[i].addEventListener('click', function() {
+
+rootNode.innerHTML = display(structure);
+let conteiners = document.getElementsByClassName('folder-item');
+let m;
+
+for (m = 0; m < conteiners.length; m++) {
+    conteiners[m].addEventListener('click', function() {
         this.parentElement.querySelector('.folder-wrapper').classList.toggle('active');
         this.parentElement.querySelector('.material-icons').classList.toggle('opened');
     });

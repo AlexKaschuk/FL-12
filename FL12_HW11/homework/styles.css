@@ -1,7 +1,7 @@
 ul,
 li {
     list-style-type: none;
-    padding-inline-start: 3px;
+    padding-inline-start: 10px;
     cursor: pointer;
 }
 
@@ -26,6 +26,7 @@ li {
 
 .folder-wrapper {
     display: none;
+    margin: 0;
 }
 
 .active {
